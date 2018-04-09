@@ -1,42 +1,192 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Javascript Calculator" />
-    <meta name="viewport" content="width=content-width, initial-scale=1" />
-    <title>My Calculator </title>
-<!-- my css -->
-    <link rel="stylesheet" href="style.css" />
-<!-- end css -->
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Javascript Calculator, Digital Clock created with JavaScript, Word Length Calculator, Addition game with JS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <title>App JS</title>
+
+</head>
+
+<body>
+
+  <!-- C A L C U LE T T E -->
+  <section class="calculette">
     <h1>Basic Calculator</h1>
     <br/>
     <form id="myform" Name="calc">
-    <input name="display" style="width:675px; height:100px; text-align:center; background-color:#1f80c9;"/><br/>
-    <input type="button" value="0" OnClick="calc.display.value+='0'"/>
-    <input type="button" value="1" OnClick="calc.display.value+='1'"/>
-    <input type="button" value="2" OnClick="calc.display.value+='2'"/>
-    <input type="button" value="+" OnClick="calc.display.value+='+'"/> <br/>
-    <input type="button" value="3" OnClick="calc.display.value+='3'"/>
-    <input type="button" value="4" OnClick="calc.display.value+='4'"/>
-    <input type="button" value="5" OnClick="calc.display.value+='5'"/>
-    <input type="button" value="-" OnClick="calc.display.value+='-'"/> <br/>
-    <input type="button" value="6" OnClick="calc.display.value+='6'"/>
-    <input type="button" value="7" OnClick="calc.display.value+='7'"/>
-    <input type="button" value="8" OnClick="calc.display.value+='8'"/>
-    <input type="button" value="x" OnClick="calc.display.value+='*'"/> <br/>
-    <input type="button" value="9" OnClick="calc.display.value+='9'"/>
-    <input type="button" value="C" OnClick="calc.display.value=''"/>
-    <input type="button" value="=" OnClick="calc.display.value=eval(calc.display.value)"/>
-    <input type="button" value="&#247;" OnClick="calc.display.value+='/'"/>
+      <input class="btncal" name="display" style="width:675px; height:100px; text-align:center; background-color:#1f80c9;"/><br/>
+      <input class="btncal" type="button" value="0" OnClick="calc.display.value+='0'">
+      <input class="btncal" type="button" value="1" OnClick="calc.display.value+='1'">
+      <input class="btncal" type="button" value="2" OnClick="calc.display.value+='2'">
+      <input class="btncal" type="button" value="+" OnClick="calc.display.value+='+'" style="background-color:#cc5c11;"> <br/>
+      <input class="btncal" type="button" value="3" OnClick="calc.display.value+='3'">
+      <input class="btncal" type="button" value="4" OnClick="calc.display.value+='4'">
+      <input class="btncal" type="button" value="5" OnClick="calc.display.value+='5'">
+      <input class="btncal" type="button" value="-" OnClick="calc.display.value+='-'" style="background-color:#ba55d3;"> <br/>
+      <input class="btncal" type="button" value="6" OnClick="calc.display.value+='6'">
+      <input class="btncal" type="button" value="7" OnClick="calc.display.value+='7'">
+      <input class="btncal" type="button" value="8" OnClick="calc.display.value+='8'">
+      <input class="btncal" type="button" value="x" OnClick="calc.display.value+='x'" style="background-color:#7db1b2;"> <br/>
+      <input class="btncal" type="button" value="9" OnClick="calc.display.value+='9'">
+      <input class="btncal" type="button" value="C" OnClick="calc.display.value=''" style="background-color:#cc0000;">
+      <input class="btncal" type="button" value="=" OnClick="calc.display.value=eval(calc.display.value)" >
+      <input class="btncal" type="button" value="&#247;" OnClick="calc.display.value+='/'"  style="background-color:green;">
     </form>
+  </section>
+
+  <!-- D I G I T A L   C L O C K -->
+  <section class="digital">
+    <div id="banner"><span>Your local time</span></div>
+    <div id="clock"></div>
+  </section>
+
+
+<!-- W O R D   L E N G T H -->
+<section class="word">
+  <h1>Type a word in the bow below</h1>
+  <input class="mot" id="str" value="" type="text">
+  <div id="output"></div>
+  <button id="btn"><h2>Click to calculate word length</h2></button>
+</section>
+
+
+
+<!-- F O R M U L A I R E -->
+<section class="form">
+  <form id="cf" method="post" action="">
+
+    <h1>Please Contact me</h1>
+
+    <fieldset>
+
+      <label for="name">Name</label>
+      <input class="input" type="text" id="name" name="name" class="stored" />
+
+      <label for="mail">Email</label>
+      <input class="input" type="email" id="email" name="email" class="stored" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" class="stored"></textarea>
+    </fieldset>
+
+  <button type="submit">Send</button>
+  <input id="clear" type="reset">
+
+  </form>
+
+</section>
 
 
 
 
-<!-- my script -->
-    <script src="script.js"></script>
-<!-- end script -->
-  </body>
+<!-- S L I D E R -->
+<section class="slider">
+
+
+  <h1 style="color:black; margin-left:395px; font-weight:bold;">Image Slider</h1>
+  <br/>
+  <br/>
+  <div class="wrapper" style="max-width:1000px; position:relative;">
+    <img class="mySlides" src="img/bg1.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg2.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg3.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg4.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg5.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg6.jpg" style="width:100%;">
+    <img class="mySlides" src="img/bg7.jpg" style="width:100%;">
+    <a class="btn1" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><span id="btnl">&lt;</span></a>
+    <a class="btn2" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)"><span id="btnr">&gt;</span></a>
+  </div>
+
+  </section>
+
+
+
+<!-- M A T H   G A M E -->
+<section class="math">
+  <div id="wrapper">
+    <table width="400" height="300" align="center">
+      <tr>
+
+        <td>
+          <div id="number1" style="font-size:45px; font-weight:bold; border:5px solid green;padding:50px;">1</div>
+        </td>
+        <td>
+          <div id="number2" style="font-size:45px; font-weight:bold; border:5px solid green;padding:50px;">2</div>
+        </td>
+        <td>
+          <div style="font-size:45px;font-weight:bold;">=</div>
+        </td>
+        <td>
+          <input type="text" style="padding:10px; border:2px solid #14d2d5"></input>
+        </td>
+        <td>
+          <input id="btn10" type="button" value="check"></input>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+<script type="text/javascript">
+
+
+var number1;
+var number2;
+
+number1 = Math.floor ((Math.random() * 10) + 1);
+number2 = Math.floor ((Math.random() * 10) + 1);
+document.getElementById("number1").innerHTML = number1;
+document.getElementById("number2").innerHTML = number2;
+
+var answer = number1 + number2;
+
+var checkAnswer = document.querySelector('input[type=text]');
+var value = checkAnswer.value;
+var btn = document.querySelector('input[type=button][value=check]')
+btn.OnClick = function () {
+  value = checkAnswer.value;
+  if (value == answer){
+    alert('You are corect');
+}else {
+  alert('You are incorect, the answer was ' + answer)
+}
+
+document.querySelector('input[type=text]').value = "";
+document.getElementById('number1').innerHTML = "";
+document.getElementById('number2').innerHTML = "";
+number1 = Math.floor((Math.random() *10) +1);
+number2 = Math.floor((Math.random() *10) +1);
+document.getElementById('number1').innerHTML = number1;
+document.getElementById('number2').innerHTML = number2;
+
+answer = number1 + number2
+};
+
+
+</script>
+</section>
+
+
+<!-- T O D O   L I S T -->
+<section class="todolist">
+
+  <div id="wrapper2">
+    <h1> Todo List</h1>
+    <input id="task"><button id="add">Ass Task</button>
+    <!--<hr>-->
+    <div id="todos">
+    </div>
+  </div>
+
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>
