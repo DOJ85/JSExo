@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Javascript Calculator, Digital Clock created with JavaScript, Word Length Calculator, Addition game with JS" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -84,10 +85,10 @@
 
 
 <!-- S L I D E R -->
-<section class="slider">
+<!-- <section class="slider">
 
 
-  <h1 style="color:black; margin-left:395px; font-weight:bold;">Image Slider</h1>
+  <h1 style="color:black; font-weight:bold; padding: 0;">Image Slider</h1>
   <br/>
   <br/>
   <div class="wrapper" style="max-width:1000px; position:relative;">
@@ -102,7 +103,7 @@
     <a class="btn2" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)"><span id="btnr">&gt;</span></a>
   </div>
 
-  </section>
+  </section> -->
 
 
 
@@ -137,8 +138,8 @@
 var number1;
 var number2;
 
-number1 = Math.floor ((Math.random() * 10) + 1);
-number2 = Math.floor ((Math.random() * 10) + 1);
+number1 = Math.floor ((Math.random() * 1000) + 1);
+number2 = Math.floor ((Math.random() * 1000) + 1);
 document.getElementById("number1").innerHTML = number1;
 document.getElementById("number2").innerHTML = number2;
 
@@ -158,8 +159,8 @@ btn.OnClick = function () {
 document.querySelector('input[type=text]').value = "";
 document.getElementById('number1').innerHTML = "";
 document.getElementById('number2').innerHTML = "";
-number1 = Math.floor((Math.random() *10) +1);
-number2 = Math.floor((Math.random() *10) +1);
+number1 = Math.floor((Math.random() *1000) +1);
+number2 = Math.floor((Math.random() *1000) +1);
 document.getElementById('number1').innerHTML = number1;
 document.getElementById('number2').innerHTML = number2;
 

@@ -1,3 +1,13 @@
+// C A L C U L E T T E
+
+var couleur =
+
+
+
+
+
+
+
 // H O R L O G E
 setInterval(function () {
   var currentTime = new Date();
@@ -23,17 +33,32 @@ setInterval(function () {
     clock.innerText = clockTime;
 }, 1000);
 
+
+
+
+
+
+
+
+
+
+
 // C O M P T E U T   D E   M O T S
 var print = function(msg) {
 
-  document.getElementById("output").innerHTML = "length is" + msg;
+  document.getElementById("output").innerHTML = "length is " + msg;
 
 }
 
 document.getElementById("btn").onclick = function(event){
-
+var i = 10
+if (document.getElementById("str").value.length < i) {
+  alert('Vous devez saisir au moins 10 characters')
+}else {
   print(document.getElementById("str").value.length);
  }
+}
+
 
 // F O R M U L A I R E
 $(document).ready(function () {
@@ -143,10 +168,44 @@ show();
 
 
 
-
-
-
-
-
-
 //
+// let speed = 300;
+// let amount = 3;
+//
+// let scroll = 0;
+// let smooth = 0;
+// let diff = 0;
+//
+// $(document).on('scroll', (event) => {
+//   scroll = $(window).scrollTop();
+// })
+//
+// let oldTime = null;
+// let delta = 0;
+//
+// const animate =  (t) =>{
+//   if (oldTime)
+//     delta = t - oldTime
+//   smooth += (scroll - smooth) * delta / speed;
+//   diff = scroll - smooth;
+//
+//   let translateCenter = diff * -2/amount;
+//   let translateRed = diff * 3/amount;
+//   let translateGreen = diff * 2/amount;
+//   let translateBlue = diff * 1/amount;
+//
+//   $('.center').css('transform', 'translateY('+translateCenter+'px)')
+//   $('.r').css('transform', 'translateY('+translateRed+'px)')
+//   $('.g').css('transform', 'translateY('+translateGreen+'px)')
+//   $('.b').css('transform', 'translateY('+translateBlue+'px)')
+//
+//   oldTime = t;
+//   requestAnimationFrame(animate)
+// }
+//
+// requestAnimationFrame(animate)
+//
+//
+//
+//
+// //
