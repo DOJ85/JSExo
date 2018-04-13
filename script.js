@@ -1,6 +1,9 @@
 // C A L C U L E T T E
+function couleur(){
+  document.getElementsByTagName('h1').style.color = '#'+(Math.random()*0xFFFFFF<<0).toString(32);
+ }
 
-var couleur =
+
 
 
 
@@ -17,6 +20,7 @@ setInterval(function () {
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
   var milliseconds = currentTime.getMilliseconds();
+  var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
   var period = "AM";
     if (hours >= 12) {
       period = "PM";
@@ -39,29 +43,34 @@ setInterval(function () {
     if (milliseconds < 10){
       milliseconds = "0" + milliseconds
     }
+    if (milliseconds < 500){
+      document.body.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(22);
+    }
+    if (milliseconds >= 500){
+      document.body.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(22);
+    }
 
 
-
-  if (day = 0){
-  (day = "Monday")
-    } else if
-    (day = 1){
-    day = "Tuesday"}
-      else if
-      (day = 2){
-      day = "Wednesday"}
-        else if
-        (day = 3){
-        day = "Thursday"}
-          else if
-          (day = 4){
-          day = "Friday"}
-            else if
-            (day = 5){
-            day = "Saturday"}
-              else
-              (day = 6)
-              day = "Sunday"
+  // if (day = 0){
+  // (day = "Monday")
+  //   } else if
+  //   (day = 1){
+  //    day = "Tuesday"}
+  //     else if
+  //     (day = 2){
+  //      day = "Wednesday"}
+  //       else if
+  //       (day = 3){
+  //        day = "Thursday"}
+  //         else if
+  //         (day = 4){
+  //          day = "Friday"}
+  //           else if
+  //           (day = 5){
+  //            day = "Saturday"}
+  //             else
+  //             (day = 6)
+  //              day = "Sunday"
 
 
 
