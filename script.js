@@ -8,12 +8,15 @@ var couleur =
 
 
 
-// H O R L O G E
+// D I G I T A L   C L O C K
 setInterval(function () {
   var currentTime = new Date();
+  var year  = currentTime.getYear() + 1900;
+  var day = currentTime.getDay();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
+  var milliseconds = currentTime.getMilliseconds();
   var period = "AM";
     if (hours >= 12) {
       period = "PM";
@@ -21,17 +24,53 @@ setInterval(function () {
     if (hours > 12) {
       hours = hours - 12;
     }
+    if (hours < 10){
+      hours = "0" + hours
+    }
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
-    var clockTime = hours + ":" + minutes + ":" + seconds + " " + period;
+    if (milliseconds < 100 ){
+      milliseconds = "0" + milliseconds
+    }
+    if (milliseconds < 10){
+      milliseconds = "0" + milliseconds
+    }
+
+
+
+  if (day = 0){
+  (day = "Monday")
+    } else if
+    (day = 1){
+    day = "Tuesday"}
+      else if
+      (day = 2){
+      day = "Wednesday"}
+        else if
+        (day = 3){
+        day = "Thursday"}
+          else if
+          (day = 4){
+          day = "Friday"}
+            else if
+            (day = 5){
+            day = "Saturday"}
+              else
+              (day = 6)
+              day = "Sunday"
+
+
+
+
+    var clockTime = year + ":" + day + ":" + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + " " + period;
 
     var clock = document.getElementById('clock');
     clock.innerText = clockTime;
-}, 1000);
+}, 10);
 
 
 
